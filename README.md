@@ -39,11 +39,11 @@ minesweeper/
 ├── css/
 │   └── styles.css       # Reset, layout grid, color styling, animations
 ├── js/
-│   ├── cell.js           # Individual cell data and behavior
-│   ├── board.js          # Grid generation, mine placement, neighbor mapping
-│   ├── game.js            # Core game state, rules, win/loss logic
-│   ├── ui.js              # Rendering, DOM updates, event delegation
-│   └── main.js            # Entry point — bootstraps the game instance
+    ├── cell.js           # Individual cell data and behavior
+    ├── board.js          # Grid generation, mine placement, neighbor mapping
+    ├── game.js            # Core game state, rules, win/loss logic
+    ├── ui.js              # Rendering, DOM updates, event delegation
+    └── main.js            # Entry point — bootstraps the game instance
 
 ```
 
