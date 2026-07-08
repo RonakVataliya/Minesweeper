@@ -44,7 +44,7 @@ minesweeper/
 │   ├── game.js            # Core game state, rules, win/loss logic
 │   ├── ui.js              # Rendering, DOM updates, event delegation
 │   └── main.js            # Entry point — bootstraps the game instance
-└── assets/               # Reserved for future icons/media
+
 ```
 
 ## Running the Project Locally
