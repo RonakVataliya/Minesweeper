@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Minesweeper</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="topbar">
+      <h1 class="title"><span class="title-mine">&#9679;</span> Minesweeper</h1>
+
+      <div class="difficulty-switch" id="difficultySwitch">
+        <button class="diff-btn active" data-difficulty="Easy">Easy</button>
+        <button class="diff-btn" data-difficulty="Medium">Medium</button>
+        <button class="diff-btn" data-difficulty="Hard">Hard</button>
+      </div>
+    </header>
+
+    <section class="hud">
+      <div class="hud-chip" title="Mines remaining">
+        <span class="hud-icon">&#9873;</span>
+        <span id="mineCounter">010</span>
+      </div>
+
+      <button id="faceButton" class="face-button" title="New game">
+        <span id="faceIcon">&#128512;</span>
+      </button>
+
+      <div class="hud-chip" title="Elapsed time">
+        <span class="hud-icon">&#9201;</span>
+        <span id="timer">000</span>
+      </div>
+    </section>
+
+    <main class="board-wrap">
+      <div id="board" class="board"></div>
+    </main>
+
+    <section class="controls">
+      <button id="hintButton" class="ctrl-btn">
+        <span class="ctrl-icon">&#128161;</span> Hint
+      </button>
+      <button id="saveButton" class="ctrl-btn">
+        <span class="ctrl-icon">&#128190;</span> Save
+      </button>
+      <button id="loadButton" class="ctrl-btn">
+        <span class="ctrl-icon">&#128193;</span> Load
+      </button>
+      <button id="flagModeButton" class="ctrl-btn">
+        <span class="ctrl-icon">&#9873;</span> Flag Mode
+      </button>
+    </section>
+
+    <p class="hint-text">Left click / tap to reveal &middot; right click (or Flag Mode + tap) to flag</p>
+
+    <footer class="best-time">
+      Best time (<span id="bestDifficultyLabel">Easy</span>): <span id="bestTime">&mdash;</span>
+    </footer>
+
+  </div>
+
+  <!-- Game over popup -->
+  <div id="loseOverlay" class="overlay hidden">
+    <div class="popup popup-lose">
+      <div class="popup-icon">&#128163;</div>
+      <h2>Boom!</h2>
+      <p>You hit a mine. Better luck next time.</p>
+      <button id="loseRetryButton" class="popup-btn">Try Again</button>
+    </div>
+  </div>
+
+  <!-- Victory popup -->
+  <div id="winOverlay" class="overlay hidden">
+    <div class="popup popup-win">
+      <div class="popup-icon">&#127942;</div>
+      <h2>You Win!</h2>
+      <p id="winSummary">Cleared the board in 0s.</p>
+      <button id="winRetryButton" class="popup-btn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="minesweeper.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
